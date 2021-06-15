@@ -20,4 +20,8 @@ public class HelloWorldController {
 		return "HELLO  " + name + " !! ";
 	}
 	
+	@RequestMapping (value = {"/query2"} , method = RequestMethod.GET)
+	public String sayHello(@RequestParam(value = "fname") String fname , @RequestParam(value = "lname")String lname ) {
+		return "HELLO  " + fname +" "+ lname + " !! ";
+	}
 }
